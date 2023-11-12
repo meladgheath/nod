@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <CalculationMode>Interpretation</CalculationMode>
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="0" />
+    <DataSources isList="true" count="0" />
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Resources isList="true" count="0" />
+    <Variables isList="true" count="0" />
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <Key>3b04d23e35684dc09d72e5c97d8a6a9b</Key>
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="2" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="1">
+        <BarCode1 Ref="3" type="Stimulsoft.Report.BarCodes.StiBarCode" isKey="true">
+          <BackColor>Transparent</BackColor>
+          <BarCodeType Ref="4" type="Stimulsoft.Report.BarCodes.StiQRCodeBarCodeType" isKey="true">
+            <BodyBrush>EmptyBrush</BodyBrush>
+            <EyeBallBrush>EmptyBrush</EyeBallBrush>
+            <EyeFrameBrush>EmptyBrush</EyeFrameBrush>
+          </BarCodeType>
+          <ClientRectangle>2.6,1,9.2,5.2</ClientRectangle>
+          <Code>12345678901</Code>
+          <Conditions isList="true" count="0" />
+          <Expressions isList="true" count="0" />
+          <Font>Arial,8,Bold,Pixel</Font>
+          <ForeColor>Black</ForeColor>
+          <Name>BarCode1</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+        </BarCode1>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Expressions isList="true" count="0" />
+      <Guid>4a901671c2644b51a18fff2ead217961</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>Page1</Name>
+      <PageHeight>29.7</PageHeight>
+      <PageWidth>21</PageWidth>
+      <Report isRef="0" />
+    </Page1>
+  </Pages>
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportAuthor>melad gheath</ReportAuthor>
+  <ReportChanged>10/24/2023 12:17:28 PM</ReportChanged>
+  <ReportCreated>10/24/2023 12:10:44 PM</ReportCreated>
+  <ReportFile>C:\Users\Melad\Documents\Report.mrt</ReportFile>
+  <ReportGuid>ed1fe13de9b34041bfc3d62f4acd3c7f</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2023.4.2.0</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        public Report()        {
+            this.InitializeComponent();
+        }
+
+        #region StiReport Designer generated code - do not modify
+		#endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>

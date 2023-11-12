@@ -1,0 +1,28 @@
+{
+  "name": "untitled10",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "jsreport-core": "^1.5.1",
+    "jsreport-handlebars": "^2.1.0",
+    "jsreport-jsrender": "^2.1.1",
+    "node-gyp": "^10.0.0",
+    "pdfkit": "^0.13.0",
+    "pg": "^8.11.3",
+    "python": "^0.0.4",
+    "stimulsoft-reports-js": "^2023.3.1",
+    "uuid": "^9.0.1"
+  }
+}
