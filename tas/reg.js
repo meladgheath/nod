@@ -2,6 +2,7 @@ import {client} from "../config/dbconfig.js";
 
 export const getElement = async (g_date,g_info,g_payment,side,brn) => {
 
+
     let sql = "SELECT * FROM wahdabank.ggg WHERE ";
     if (g_date != null)
         sql = sql + "g_date LIKE '%"+g_date+"%'" ;
@@ -16,8 +17,10 @@ export const getElement = async (g_date,g_info,g_payment,side,brn) => {
         sql = sql +" AND g_payment LIKE '%"+g_payment+"%'";
     else
         sql = sql +" AND g_payment LIKE '%%'" ;
+
     if (side != null)
-        sql = sql + " AND side = "+side+"" ;
+        sql = sql + " AND side = " + side + "";
+
     if (brn != null)
         sql = sql + " AND brn LIKE '%"+brn+"%'" ;
     else

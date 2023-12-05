@@ -1,4 +1,5 @@
 import express from "express";
+import {db} from "./oracleClient/reg.js";
 
 import bodyParser from "body-parser";
 import {
@@ -29,10 +30,10 @@ import {get_export, post_export} from "./export/controller.js";
 import {get_refMessage, get_refMessage_id, post_refMessage} from "./refMessage/controller.js";
 import {get_side, post_tas} from "./tas/controller.js";
 
-
 const app = new express() ;
-
-app.listen(3003,()=> console.log('listening 3003 . . .'));
+app.listen(3003, function () {
+    console.log("Listening  on port 3003");
+});
 const allowCrossDomain = function(req, res, next) {
     res.header('Access-Control-Allow-Origin', "*");
     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
@@ -40,9 +41,14 @@ const allowCrossDomain = function(req, res, next) {
     next();
 }
 app.use(allowCrossDomain);
-
 app.use(bodyParser.json({limit:'50mb'}));
 app.use(express.json());
+app.get('/',(req,res)=> {
+    let message = '<h1>Welcome to Node Js . . .</h1>' +
+        '<h3>/management [get]</h3>' ;
+    res.send(message) ;
+    res.end() ;
+});
 
 app.post('/management',post_management)
 app.get('/management',get_management) ;
@@ -73,6 +79,11 @@ app.get('/refMessage',get_refMessage);
 app.get('/refMessage/:id',get_refMessage_id);
 app.post('/tas',post_tas);
 app.get('/side',get_side) ;
+app.get('/mm',(req,res)=> {
+
+    req.send({here:"Welcome"});
+    req.end();
+})
 
 /*
 app.get('/here', async (req,res)=> {

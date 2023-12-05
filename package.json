@@ -5,7 +5,7 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-
+    "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -19,10 +19,14 @@
     "jsreport-handlebars": "^2.1.0",
     "jsreport-jsrender": "^2.1.1",
     "node-gyp": "^10.0.0",
+    "oracledb": "^6.2.0",
     "pdfkit": "^0.13.0",
     "pg": "^8.11.3",
     "python": "^0.0.4",
     "stimulsoft-reports-js": "^2023.3.1",
     "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "webpack": "^5.89.0"
   }
 }
