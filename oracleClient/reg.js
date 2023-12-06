@@ -5,12 +5,16 @@ const config = {
     password: "wahcprd",
     connectString: "WAHDADB"
 }
-oracledb.getConnection(config,(err,connection)=> {
+
+export const db = oracledb.getConnection(config,(err,connection)=> {
         if (err){
             console.log(err.message);
-            return  ;
+            return ;
         }
+        db = connection ;
         console.log('successfully') ;
     }
 ) ;
-export const db = oracledb ;
+
+// export const db = oracledb ;
+// export const db = dbOra ;

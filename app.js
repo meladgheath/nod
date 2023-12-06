@@ -1,5 +1,4 @@
 import express from "express";
-import {db} from "./oracleClient/reg.js";
 
 import bodyParser from "body-parser";
 import {
@@ -43,6 +42,7 @@ const allowCrossDomain = function(req, res, next) {
 app.use(allowCrossDomain);
 app.use(bodyParser.json({limit:'50mb'}));
 app.use(express.json());
+
 app.get('/',(req,res)=> {
     let message = '<h1>Welcome to Node Js . . .</h1>' +
         '<h3>/management [get]</h3>' ;
